@@ -1,0 +1,136 @@
+<style>
+    
+</style>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <td>
+                <clr-tabs>
+                    <clr-tab align="left">
+                        <button clrTabLink id="link1">Items List</button>
+                        <clr-tab-content id="content1" *clrIfActive>
+                        <br />
+                        <clr-accordion [clrAccordionMultiPanel]="true">
+                            <clr-accordion-panel [clrAccordionPanelOpen]="true" align="left">
+                                <clr-accordion-title>Firsties</clr-accordion-title>
+                                <clr-accordion-content style="align-content:left;padding:0;">
+                                    <clr-stack-block style="margin-top:0px;">
+                                        <clr-stack-view>
+                                            <clr-stack-header style="margin-top:0 !important;">MDM</clr-stack-header>
+                                            <clr-stack-content>
+                                                <div style="padding:3px;">COPA: 5<br />
+                                                DATA: 4<br />
+                                                RISK: 3
+                                            </div>
+                                            </clr-stack-content>
+                                        </clr-stack-view>
+                                    </clr-stack-block>
+                                </clr-accordion-content>
+                            </clr-accordion-panel>
+                            <clr-accordion-panel [clrAccordionPanelOpen]="true">
+                                <clr-accordion-title>Secondsies</clr-accordion-title>
+                                <clr-accordion-content>This is the second list</clr-accordion-content>
+                            </clr-accordion-panel>
+                            <clr-accordion-panel [clrAccordionPanelOpen]="false">
+                                <clr-accordion-title>Thirdsies</clr-accordion-title>
+                                <clr-accordion-content><br /><br />This is the third list</clr-accordion-content>
+                            </clr-accordion-panel>
+                        </clr-accordion>
+                        </clr-tab-content>
+                    </clr-tab>
+                    <clr-tab>
+                        <button clrTabLink>Signatures</button>
+                        <clr-tab-content *clrIfActive>
+                            <br />
+                            Signatures
+                        </clr-tab-content>
+                    </clr-tab>
+                    <clr-tab>
+                        <button clrTabLink id="link1">Stuff</button>
+                        <clr-tab-content id="content1" *clrIfActive>
+                            <br />
+                            Other Stuff
+                        </clr-tab-content>
+                    </clr-tab>
+                    <clr-tab>
+                        <button clrTabLink>Drugs</button>
+                        <clr-tab-content *clrIfActive>
+                            <br />
+                            Drugs
+                        </clr-tab-content>
+                    </clr-tab>
+                    <clr-tab>
+                        <button clrTabLink id="link1">Labs</button>
+                        <clr-tab-content id="content1" *clrIfActive>
+                            <br />
+                            Labs
+                        </clr-tab-content>
+                    </clr-tab>
+                    <clr-tab>
+                        <button clrTabLink>MDM</button>
+                        <clr-tab-content *clrIfActive>
+                            <br />
+                            MDM
+                        </clr-tab-content>
+                    </clr-tab>
+                </clr-tabs>
+                
+            </td>
+            <td>
+                <div align="right" style="margin-bottom:3px;">
+                    <button type="button" class="btn btn-icon btn-sm btn-primary" aria-label="settings">
+                        <cds-icon shape="bolt"></cds-icon> Code It!
+                    </button>
+                </div>
+                <clr-datagrid>
+                    <clr-dg-column>User ID</clr-dg-column>
+                    <clr-dg-column>Name</clr-dg-column>
+                    <clr-dg-column>Creation date</clr-dg-column>
+                    <clr-dg-column>Favorite color</clr-dg-column>
+                
+                    <clr-dg-row *ngFor="let user of users">
+                        <clr-dg-cell>{{user.id}}</clr-dg-cell>
+                        <clr-dg-cell>{{user.name}}</clr-dg-cell>
+                        <clr-dg-cell>{{user.creation | date}}</clr-dg-cell>
+                        <clr-dg-cell>{{user.color}}</clr-dg-cell>
+                    </clr-dg-row>
+                
+                    <clr-dg-footer>{{users.length}} users</clr-dg-footer>
+                </clr-datagrid>
+                <br /><br />
+                <clr-datagrid>
+                    <clr-dg-column>User ID</clr-dg-column>
+                    <clr-dg-column>Name</clr-dg-column>
+                    <clr-dg-column>Creation date</clr-dg-column>
+                    <clr-dg-column>Favorite color</clr-dg-column>
+                
+                    <clr-dg-row *ngFor="let user of users">
+                        <clr-dg-cell>{{user.id}}</clr-dg-cell>
+                        <clr-dg-cell>{{user.name}}</clr-dg-cell>
+                        <clr-dg-cell>{{user.creation | date}}</clr-dg-cell>
+                        <clr-dg-cell>{{user.color}}</clr-dg-cell>
+                    </clr-dg-row>
+                
+                    <clr-dg-footer>{{users.length}} users</clr-dg-footer>
+                </clr-datagrid>
+                <br /><br />
+                <clr-datagrid>
+                    <clr-dg-column>User ID</clr-dg-column>
+                    <clr-dg-column>Name</clr-dg-column>
+                    <clr-dg-column>Creation date</clr-dg-column>
+                    <clr-dg-column>Favorite color</clr-dg-column>
+                
+                    <clr-dg-row *ngFor="let user of users">
+                        <clr-dg-cell>{{user.id}}</clr-dg-cell>
+                        <clr-dg-cell>{{user.name}}</clr-dg-cell>
+                        <clr-dg-cell>{{user.creation | date}}</clr-dg-cell>
+                        <clr-dg-cell>{{user.color}}</clr-dg-cell>
+                    </clr-dg-row>
+                
+                    <clr-dg-footer>{{users.length}} users</clr-dg-footer>
+                </clr-datagrid>
+            </td>
+        </tr>
+    </tbody>
+</table>

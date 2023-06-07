@@ -1,0 +1,39 @@
+<div class="main-container"><header class="header-6">
+  <div class="branding">
+      <cds-icon shape="shield" size="xl" style="margin-top:4px"></cds-icon> <span style="margin-top:14px;">Clarity Demo</span>
+  </div>
+  <div class="header-nav">
+      <a href="javascript://" class="active nav-link nav-text">Dashboard</a>
+      <a href="javascript://" class="nav-link nav-text">Analytics</a>
+  </div>
+  <div class="header-actions">
+    <input type="text" style="margin:13px 0 13px 0;" />
+      <a href="javascript://" class="nav-link nav-icon" aria-label="settings">
+          <cds-icon shape="search"></cds-icon>
+      </a>
+  </div>
+</header>
+<div class="content-container">
+  <clr-vertical-nav [clrVerticalNavCollapsible]="true">
+    <a clrVerticalNavLink routerLink="./normal" routerLinkActive="active">
+        <cds-icon clrVerticalNavIcon shape="dashboard"></cds-icon>
+        Dashboard
+    </a>
+    <a clrVerticalNavLink routerLink="./electric" routerLinkActive="active">
+        <cds-icon clrVerticalNavIcon shape="bolt"></cds-icon>
+        Coding
+    </a>
+    <a clrVerticalNavLink routerLink="./poison" routerLinkActive="active">
+        <cds-icon clrVerticalNavIcon shape="administrator"></cds-icon>
+        Admin
+    </a>
+    <a clrVerticalNavLink routerLink="./grass" routerLinkActive="active">
+        <cds-icon clrVerticalNavIcon shape="search"></cds-icon>
+        Search
+    </a>
+</clr-vertical-nav>
+  <div class="content-area">
+      <router-outlet></router-outlet>
+  </div>
+</div>
+</div>
